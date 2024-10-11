@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About manaBanka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(45deg, #ff8520, #ffb347);
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            margin: 0 15px;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a i {
+            margin-right: 8px; /* Space between icon and text */
+        }
+
+        nav a:hover {
+            background-color: #555;
+            color: #ff8520;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        aside {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: auto; /* Ensure footer stays at the bottom */
+        }
+
+        footer a {
+            color: #ff8520;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Card Styles */
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: linear-gradient(45deg, #fff, #f1f1f1);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            text-align: center;
+            max-height: 400px; /* Set the maximum height */
+            overflow: hidden; /* Hide overflow content */
+        }
+
+        .card img {
+            width: 80%; /* Adjust the width as needed */
+            height: auto;
+            margin: 10px auto; /* Center the image horizontally */
+            display: block;
+        }
+
+        .card h2 {
+            margin: 15px 0;
+        }
+
+        .card p {
+            padding: 0 15px;
+        }
+
+        .card button {
+            background-color: #ff8520;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card button:hover {
+            background-color: #e67300;
+            transform: scale(1.05);
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        header.dark-mode {
+            background: linear-gradient(45deg, #333, #444);
+        }
+
+        nav.dark-mode {
+            background-color: #222;
+        }
+
+        nav.dark-mode a {
+            color: #ff8520;
+        }
+
+        nav.dark-mode a:hover {
+            background-color: #444;
+            color: #fff;
+        }
+
+        main.dark-mode {
+            background-color: #333;
+            color: #ff8520;
+        }
+
+        .card.dark-mode {
+            background: linear-gradient(45deg, #333, #444);
+            border: 1px solid #555;
+        }
+
+        aside.dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+
+        aside.dark-mode ul {
+            background-color: #000;
+            color: #fff;
+        }
+
+        footer.dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>manaBanka</h1>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <main>
+    <div class="card-container">
+        <div class="card">
+            <img src="images/IMG_2737.png" alt="Hobiji">
+            <h2>Hobiji</h2>
+            <p>Vairāku hobiju entuziasts. Ja neticat, spiežat pogu, kas atrodas zem šī apraksta</p>
+            <button>Uzzināt vairāk</button>
+        </div>
+        <div class="card">
+            <img src="images/Screenshot 2024-10-09 135516.png" alt="Skili">
+            <h2>Skills</h2>
+            <p>Kādas programmēšanas valodas esmu apguvis/apgūstu?</p>
+            <button>Uzzināt vairāk</button>
+        </div>
+        <div class="card">
+            <img src="images/patboard-lean-planning-board-magnetic-category.jpg" alt="Projekti">
+            <h2>Projekti</h2>
+            <p>Šeit varat apskatīt kādus no maniem pabeigtajiem projektiem (bildē nav redzama īsta projekta bilde)</p>
+            <button>Uzzināt vairāk</button>
+        </div>
+    </div>
+</main>
+    <aside>
+        <h3>Jums varētu šis noderēt!</h3>
+        <ul>
+            <li><a href="#article1">Kā ietaupīt naudu</a></li>
+            <li><a href="https://azartaatkariba.lv/">Vai tev ir azartspēļu atkarība?</a></li>
+            <li><a href="#article3">Kā investēt naudu</a></li>
+        </ul>
+    </aside>
+    <footer>
+        <p>&copy; 2024 manaBanka. Visas tiesības aizsargātas.</p>
+        <p>Pieseko mums 
+            <a href="https://facebook.com">Facebook</a>, 
+            <a href="https://x.com/theeuropeanlad">X</a>, 
+            <a href="https://www.instagram.com/leomessi/">Instagram</a>
+        </p>
+    </footer>
+    <script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('nav').classList.toggle('dark-mode');
+        document.querySelectorAll('.card').forEach(card => card.classList.toggle('dark-mode'));
+        document.querySelector('aside').classList.toggle('dark-mode');
+    }
+    </script>
+</body>
+</html>
