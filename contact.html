@@ -6,7 +6,7 @@
     <title>manaBanka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -34,6 +34,7 @@
             color: #ff8520;
         }
         main {
+            flex: 1;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -43,7 +44,70 @@
         aside {
             background-color: #f1f1f1;
             padding: 10px;
-            margin: 20px 0;
+            margin: 260px 0;
+        }
+        .card {
+            background: linear-gradient(45deg, #fff, #f1f1f1);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            .card {
+                width: 100%;
+            }
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        header.dark-mode {
+            background: linear-gradient(45deg, #333, #555);
+        }
+        nav.dark-mode a {
+            color: hsl(0, 0%, 100%);
+        }
+        nav.dark-mode a:hover {
+            background-color: #777;
+            color: #ff8520;
+        }
+        .card.dark-mode {
+            background: linear-gradient(45deg, #333, #444);
+            border: 1px solid #555;
+        }
+        aside.dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+        aside.dark-mode ul {
+            background-color: #000;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a {
+            color: #ff8520;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
         .card {
             background: linear-gradient(45deg, #fff, #f1f1f1);
